@@ -1,0 +1,91 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Java_Robot_Controller_for_WP7.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    
+    <!--Capstone Project, Spring 2012, David Bradshaw, Gregory Fincher, Kelvin Hawkins, Brandon McNutt-->
+    <!--XAML file for Silverlight Application for Windows Phone 7-->
+
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="302*" />
+            <ColumnDefinition Width="178*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Margin="12,17,0,28" Grid.ColumnSpan="2">
+            <TextBlock x:Name="ApplicationTitle" Text="Java Robot Controller" Style="{StaticResource PhoneTextNormalStyle}" Height="38" Width="443" />
+                    </StackPanel>
+
+        <!--Main Connection Window, Connect To...-->
+        <Grid x:Name="connection" Grid.Row="1" Margin="12,0" Visibility="Visible" Grid.ColumnSpan="2">
+            <TextBlock x:Name="connect_title" Text="Connect" Margin="9,-55,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="6,177,0,0" Name="ip_address" Text="" VerticalAlignment="Top" Width="438" />
+            <TextBlock Height="90" HorizontalAlignment="Center" Margin="0,40,4,0" Name="connect_instruct" Text="Type in the IP and Port number for the Robot.  Remember, you need to be on the same Wi-Fi Network." TextAlignment="Center" VerticalAlignment="Top" Width="452" TextWrapping="Wrap" FontStyle="Italic" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="20,161,0,0" Name="ip_label" Text="IP Address" VerticalAlignment="Top" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="6,328,0,0" Name="port_number" Text="" VerticalAlignment="Top" Width="438" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="20,312,0,0" Name="port_label" Text="Port Number" VerticalAlignment="Top" />
+            <Button Content="Connect" Height="112" HorizontalAlignment="Left" Margin="9,472,0,0" Name="connect" VerticalAlignment="Top" Width="205" Click="connect_Click" />
+            <Button Content="Reset" Height="112" HorizontalAlignment="Left" Margin="245,472,0,0" Name="reset" VerticalAlignment="Top" Width="198" Click="reset_Click" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="146,649,0,0" Name="connect_help" Text="Click here for Help" VerticalAlignment="Top" MouseLeftButtonDown="connect_help_MouseLeftButtonDown" />
+        </Grid>
+
+        <!--Directional Pad Controls-->
+        <Grid x:Name="dpad" Grid.Row="1" Margin="12,0" Visibility="Collapsed" Grid.ColumnSpan="2">
+            <TextBlock x:Name="dpad_title" Text="D-Pad" Margin="12,-33,-3,-22" Style="{StaticResource PhoneTextTitle1Style}" Grid.RowSpan="2" />
+            <Button HorizontalContentAlignment="Center" Margin="157,71,153,471" Name="Up" Content="Up" Click="Up_Click" />
+            <Button Content="Left" HorizontalContentAlignment="Center" Margin="35,186,273,364" Name="left" Click="left_Click" />
+            <Button Content="Right" HorizontalContentAlignment="Center" Margin="277,186,31,364" Name="right" Click="right_Click" />
+            <Button Content="Down" HorizontalContentAlignment="Center" Margin="157,294,153,249" Name="down" Click="down_Click" />
+            <Button Content="Stick Control" Height="94" HorizontalAlignment="Left" Margin="13,548,0,0" Name="stick_change" VerticalAlignment="Top" Width="207" Click="stick_change_Click" />
+            <Button Content="Disconnect" Height="94" HorizontalAlignment="Left" Margin="243,548,0,0" Name="dpad_disconnect" VerticalAlignment="Top" Width="207" Click="dpad_disconnect_Click" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="146,649,0,0" Name="dpad_help" Text="Click here for Help" VerticalAlignment="Top" MouseLeftButtonDown="dpad_help_MouseLeftButtonDown" />
+            <Button Content="STOP" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,186,153,364" Name="Stop" Width="148" Click="Stop_Click" />
+            <Button Content="Dance!" Height="72" HorizontalAlignment="Right" Margin="0,460,153,0" Name="button1" VerticalAlignment="Top" Width="146" Click="button1_Click" />
+        </Grid>
+
+        <!--Sick Controls-->
+        <Grid x:Name="stick" Grid.Row="1" Margin="12,0" Visibility="Collapsed" Grid.ColumnSpan="2">
+            <TextBlock x:Name="stick_title" Text="Stick" Margin="12,-33,-3,-22" Style="{StaticResource PhoneTextTitle1Style}" Grid.RowSpan="2" />
+            <Button Content="D-Pad Control" Height="94" HorizontalAlignment="Left" Margin="13,538,0,0" Name="dpad_change" VerticalAlignment="Top" Width="207" FontWeight="Normal" FontSize="24" Click="dpad_change_Click" />
+            <Button Content="Disconnect" Height="94" HorizontalAlignment="Left" Margin="243,538,0,0" Name="stick_disconnect" VerticalAlignment="Top" Width="207" Click="stick_disconnect_Click" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="146,649,0,0" Name="stick_help" Text="Click here for Help" VerticalAlignment="Top" MouseLeftButtonDown="stick_help_MouseLeftButtonDown" />
+            <Slider Height="454" HorizontalAlignment="Left" Margin="33,78,0,0" Name="left_slider" VerticalAlignment="Top" Width="68" Orientation="Vertical" SmallChange="1" Value="50" Maximum="100" ValueChanged="left_slider_ValueChanged" IsDirectionReversed="False" />
+            <Slider Height="454" HorizontalAlignment="Left" Margin="198,78,0,0" Maximum="100" Name="center_slider" Orientation="Vertical" SmallChange="1" Value="50" VerticalAlignment="Top" Width="68" ValueChanged="center_slider_ValueChanged" />
+            <Slider Height="454" HorizontalAlignment="Left" Margin="362,78,0,0" Maximum="100" Name="right_slider" Orientation="Vertical" SmallChange="1" Value="50" VerticalAlignment="Top" Width="68" ValueChanged="right_slider_ValueChanged" IsDirectionReversed="True" />
+            <TextBlock Height="80" HorizontalAlignment="Left" Margin="96,260,0,0" Name="left_value" Text="" VerticalAlignment="Top" Width="100" FontSize="56" />
+            <TextBlock Height="80" HorizontalAlignment="Left" Margin="272,260,0,0" Name="right_value" Text="" VerticalAlignment="Top" Width="100" FontSize="56" FlowDirection="RightToLeft" />
+        </Grid>
+
+        <!--Error Message Window-->
+        <Grid Grid.ColumnSpan="2" Grid.Row="1" Height="340" HorizontalAlignment="Left" Margin="25,128,0,0" Name="error" VerticalAlignment="Top" Width="442" Visibility="Collapsed">
+            <TextBlock x:Name="error_title" Text="Unable to Connect" Margin="56,0,51,242" Style="{StaticResource PhoneTextTitle1Style}" FontSize="40" />
+            <TextBlock Height="149" HorizontalAlignment="Left" Margin="7,66,0,0" Name="textBlock1" TextAlignment="Center" Text="The application was unable to conenct to the Java Robot.  Please verify that you are on the same WiFi network and that the robot is running properly with WiFi." VerticalAlignment="Top" Width="429" TextWrapping="Wrap" />
+            <Button Content="OK" Height="94" HorizontalAlignment="Left" Margin="125,221,0,0" Name="button2" VerticalAlignment="Top" Width="193" Click="button2_Click" />
+        </Grid>
+
+        <!--Help/About Window-->
+        <Grid Grid.ColumnSpan="2" Grid.Row="1" Height="657" HorizontalAlignment="Left" Margin="25,0,0,12" Name="help" VerticalAlignment="Bottom" Width="455" Visibility="Collapsed">
+            <TextBlock x:Name="help_title" Text="Help/About" Margin="125,0,104,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="40" Height="60" VerticalAlignment="Top" />
+            <TextBlock Height="504" HorizontalAlignment="Left" Margin="7,66,0,0" Name="help_text" TextAlignment="Center" Text="To use this application input the IP Address and Port number of the Java Robot.   Once you connect you can choose to either control the Robot using the friendly D-Pad or the Advance Stick Controls that allow you to use the full power of each wheel independently, or control both (using the center stick).  To disconnect from the Robot, press Disconnect, this is recommended over closing the App.  If you are unable to connect, ensure that you are on the proper Wi-Fi and that the robot Wi-Fi adapter is running properly.  This app was developed for Windows Phone 7 Mango (earlier editions will not work due to Socket limitations.  David Bradshaw, Gregory Fincher, Kelvin Hawkins, and Brandon McNutt developed it for Capstone Project at Georgia Southwestern State University for Spring 2012 semester." VerticalAlignment="Top" Width="429" TextWrapping="Wrap" />
+            <Button Content="Close" Height="81" HorizontalAlignment="Left" Margin="125,576,0,0" Name="help_close" VerticalAlignment="Top" Width="193" Click="help_close_Click" />
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

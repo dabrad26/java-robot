@@ -1,0 +1,13 @@
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\Bin\Debug\ApplicationIcon.png
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\Bin\Debug\Background.png
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\Bin\Debug\Java Robot Controller for WP7.dll
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\Bin\Debug\Java Robot Controller for WP7.pdb
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\Bin\Debug\AppManifest.xaml
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\Bin\Debug\Java_Robot_Controller_for_WP7.xap
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\obj\Debug\ResolveAssemblyReference.cache
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\obj\Debug\App.g.i.cs
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\obj\Debug\MainPage.g.i.cs
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\obj\Debug\Java Robot Controller for WP7.g.resources
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\obj\Debug\Java Robot Controller for WP7.dll
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\obj\Debug\Java Robot Controller for WP7.pdb
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller for WP7\Java Robot Controller for WP7\obj\Debug\XapCacheFile.xml

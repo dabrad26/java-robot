@@ -1,0 +1,9 @@
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\bin\Debug\Java Robot Controller.exe
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\bin\Debug\Java Robot Controller.pdb
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\obj\x86\Debug\ResolveAssemblyReference.cache
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\obj\x86\Debug\Java_Robot_Controller.Form1.resources
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\obj\x86\Debug\Java_Robot_Controller.Properties.Resources.resources
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\obj\x86\Debug\GenerateResource.read.1.tlog
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\obj\x86\Debug\GenerateResource.write.1.tlog
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\obj\x86\Debug\Java Robot Controller.exe
+\\vmware-host\shared folders\documents\visual studio 2010\Projects\Java Robot Controller\Java Robot Controller\obj\x86\Debug\Java Robot Controller.pdb
